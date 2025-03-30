@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: muhammadfaizpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: muhammadfaizpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: muhammadfaizpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: muhammadfaizpipelinesjavascriptdocker 
+          image: a2containerfaiz.azurecr.io/muhammadfaizpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
